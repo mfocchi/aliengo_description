@@ -8,7 +8,6 @@
     <xacro:arg name="task_period" default="0.004"/>
     <xacro:arg name="arm_enabled" default="false"/>
     <xacro:arg name="arm_name" default="kinova"/>
-    <xacro:arg name="new_gazebo_version" default="false"/>
     <xacro:arg name="robot_name"  default="aliengo"/>
     <xacro:arg name="base_name"   default="trunk"/>
 
@@ -33,15 +32,6 @@
     <!-- Rollover Protection mode will add an additional stick on the top, use "true" or "false" to switch it. -->
     <xacro:property name="rolloverProtection" value="false"/>
 
-    <!-- Floating-base Joint -->
-    <xacro:unless value="$(arg new_gazebo_version)">
-            <link name="world"/>
-            <joint name="floating_base_joint" type="floating">
-              <origin rpy="0 0 0" xyz="0 0 0"/>
-              <parent link="world"/>
-              <child link="base_link"/>
-            </joint>
-    </xacro:unless>
 
 
     <link name="base_link" />
