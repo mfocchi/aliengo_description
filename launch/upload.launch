@@ -8,7 +8,7 @@
         <arg name="urdf_file" default="$(eval find(arg('robot_name') + '_description') + '/robots/' + arg('robot_name') + '.urdf.xacro')"/>
         <arg name="srdf_file" default="$(eval find(arg('robot_name') + '_description') + '/robots/' + arg('robot_name') + '.srdf.xacro')"/>
         <arg name="srdf_file_arm" default="$(eval find(arg('robot_name') + '_description') + '/robots/' + arg('robot_name') + '_' + arg('arm_name') + '.srdf.xacro')"/>
-        
+        <arg name="load_force_sensors" default="false"/>
         <param name="task_period"  value="$(arg task_period)" />
 
         <!-- send robot urdf to param server -->
