@@ -40,21 +40,21 @@
     <xacro:property name="HAA_position_max" value="${70*PI/180.0}"/>
     <xacro:property name="HAA_position_min" value="${-70*PI/180.0}"/>
     <xacro:property name="HAA_velocity_max" value="20"/>
-    <xacro:property name="HAA_effort_max" value="44"/>
+    <xacro:property name="HAA_effort_max" value="35.278"/>
     
     <xacro:property name="HFE_position_max" value="${PI}"/>
     <xacro:property name="HFE_position_min" value="${-PI}"/>
     <xacro:property name="HFE_velocity_max" value="20"/>
-    <xacro:property name="HFE_effort_max" value="44"/>
+    <xacro:property name="HFE_effort_max" value="35.278"/>
     
     <xacro:property name="KFE_position_max" value="${-37*PI/180.0}"/>
     <xacro:property name="KFE_position_min" value="${-159*PI/180.0}"/>
     <xacro:property name="KFE_velocity_max" value="16"/>
-    <xacro:property name="KFE_effort_max" value="55"/>
+    <xacro:property name="KFE_effort_max" value="44.4"/>
 
     <!-- dynamics inertial value -->
     <!-- trunk -->
-    <xacro:property name="trunk_mass" value="11.041"/>
+    <xacro:property name="trunk_mass" value="12.041"/>
     <xacro:property name="trunk_com_x" value="0.008465"/>
     <xacro:property name="trunk_com_y" value="0.004045"/>
     <xacro:property name="trunk_com_z" value="-0.000763"/>
