@@ -5,7 +5,7 @@
   <!--<xacro:include filename="$(find sensors_description)/urdfs/sensors/velodyne.gazebo.xacro"/>-->
   <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
   <xacro:include filename="$(find sensors_description)/urdfs/sensors/realsense_d435.urdf.xacro" />
-  <xacro:include filename="$(find sensors_description)/urdfs/sensors/realsense_t265.xacro" />
+  <xacro:include filename="$(find sensors_description)/urdfs/sensors/realsense_t265.urdf.xacro" />
 
   <!-- parent to cage joint, located between mounting plate on base and the cage -->
   <joint name="trunk_to_lidar_cage" type="fixed">
@@ -59,11 +59,11 @@
     <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:VLP-16>
 
-  <xacro:sensor_d435 name="d435" topics_ns="d435" parent="trunk">
+  <xacro:realsense_d435 name="d435" topics_ns="d435" parent="trunk">
     <origin xyz="0.325 0 0.025" rpy="0 0 0" />
-  </xacro:sensor_d435>
+  </xacro:realsense_d435>
 
-  <xacro:realsense_T265 sensor_name="t265" parent_link="trunk" rate="30.0">
+  <xacro:realsense_T265 name="t265" topics_ns="435" parent="trunk" rate="30.0">
     <origin xyz="0.33 0 0" rpy="0 0.24 0" />
   </xacro:realsense_T265>
 
