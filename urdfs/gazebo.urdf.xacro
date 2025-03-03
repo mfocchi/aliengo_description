@@ -10,6 +10,9 @@
                         <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
                         <controlPeriod>$(arg task_period)</controlPeriod>
 		</plugin>
+		
+		<plugin name="set_mass_plugin" filename="libset_mass_plugin.so"/>
+	        <plugin name="set_damping_plugin" filename="libset_damping_plugin.so"/> 
 
               <plugin filename="libgazebo_ros_p3d.so" name="ground_truth">
                         <robotNamespace>$(arg robot_name)</robotNamespace>
