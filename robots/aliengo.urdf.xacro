@@ -163,7 +163,7 @@
     <!-- Standard accessories. -->
     <xacro:if value="$(arg sensors)">
 	    <!-- IMU -->
-	    <gazebo reference="imu_link">
+	    <gazebo reference="trunk_imu">
 		<gravity>true</gravity>
 		<sensor name="imu_sensor" type="imu">
 		    <always_on>true</always_on>
@@ -202,12 +202,12 @@
 		    <topic>__default_topic__</topic>
 		    <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
 		        <topicName>$(arg robot_name)/trunk_imu</topicName>
-		        <bodyName>imu_link</bodyName>
+		        <bodyName>trunk_imu</bodyName>
 		        <updateRateHZ>${1/ $(arg task_period)}</updateRateHZ>
 		        <gaussianNoise>0.00001</gaussianNoise>    <!-- STD dev sqrt of covariance -->
 		        <xyzOffset>0 0 0</xyzOffset>
 		        <rpyOffset>0 0 0</rpyOffset>
-		        <frameName>imu_link</frameName>
+		        <frameName>trunk_imu</frameName>
 		    </plugin>
 		    <pose>0 0 0 0 0 0</pose>
 		</sensor>
